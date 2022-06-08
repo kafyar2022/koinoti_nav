@@ -1,5 +1,12 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\CarrierController;
+use App\Http\Controllers\ContactsController;
+use App\Http\Controllers\ContributionController;
+use App\Http\Controllers\MainController;
+use App\Http\Controllers\PartnershipController;
+use App\Http\Controllers\ProjectsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +20,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::redirect('/', '/ru');
+
+Route::group(['prefix' => '{locale}'], function () {
+  Route::get('/', [MainController::class, 'index'])->name('home');
+  Route::get('/about/{category}', [AboutController::class, 'index'])->name('about');
+  Route::get('/projects/{category}', [ProjectsController::class, 'index'])->name('projects');
+  Route::get('/partnership/{category}', [PartnershipController::class, 'index'])->name('partnership');
+  Route::get('/contribution', [ContributionController::class, 'index'])->name('contribution');
+  Route::get('/contacts', [ContactsController::class, 'index'])->name('contacts');
+  Route::get('/carrier', [CarrierController::class, 'index'])->name('carrier');
 });
