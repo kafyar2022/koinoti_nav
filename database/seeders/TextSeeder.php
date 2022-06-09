@@ -29,6 +29,16 @@ class TextSeeder extends Seeder
         'ru_text' => '+992 918 55 64 64',
         'tj_text' => '+992 918 55 64 64',
       ),
+      array(
+        'caption' => 'copyright',
+        'page' => 'all',
+        'en_text' => '© 2020 Koinoti Nav
+All rights reserved',
+        'ru_text' => '© 2020 Коиноти нав
+Все права защищены',
+        'tj_text' => '© 2020 Коиноти нав
+Ҳамаи ҳуқуқ маҳфуз аст',
+      ),
     );
 
     foreach ($texts as $text) {

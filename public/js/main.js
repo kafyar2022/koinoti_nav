@@ -1,4 +1,5 @@
 const linkEls = document.querySelectorAll('.site-navigation__link--with-extra');
+const scrollTopBtn = document.querySelector('.scroll-top-btn');
 
 const hideOpenedPageNavEl = () => {
   const navEl = document.querySelector('.page-navigation--shown');
@@ -22,4 +23,4 @@ linkEls.forEach((linkEl) => {
   });
 });
 
-
+scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
