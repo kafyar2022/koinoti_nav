@@ -16,6 +16,10 @@ class DatabaseSeeder extends Seeder
     $this->call([
       TextSeeder::class,
       SocialSeeder::class,
+      HistorySeeder::class,
+      NewsSeeder::class,
+      ProjectSeeder::class,
+      ValueSeeder::class,
     ]);
   }
 }

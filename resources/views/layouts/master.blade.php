@@ -9,6 +9,7 @@
   <meta name="googlebot" content="noindex">
 
   <title>@yield('title')</title>
+  <link rel="stylesheet" href="{{ asset('glide/glide.css') }}">
   <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
@@ -25,6 +26,7 @@
 
   @include('layouts.footer')
 
+  <script src="{{ asset('glide/glide.min.js') }}"></script>
   <script src="{{ asset('js/main.js') }}"></script>
   @yield('script')
 </body>

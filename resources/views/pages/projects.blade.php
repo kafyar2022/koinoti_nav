@@ -7,7 +7,7 @@
 @section('content')
   <main class="main-content">
     <div class="container">
-      with our support
+      projects
     </div>
   </main>
 @endsection

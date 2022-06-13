@@ -6,8 +6,28 @@
 
 @section('content')
   <main class="main-content">
-    <div class="container">
-      history page
+    <div class="board about-history__board">
+      <div class="container">
+        <div class="board__inner board__inner--narrow">
+          <h1 class="board__title">{{ $data['texts']['about-history-board-title'] }}</h1>
+          <p class="board__text board__text--upper">{{ $data['texts']['about-history-board-text'] }}</p>
+
+          <a class="play-video about-history__play-video">{!! __('Watch <br> video') !!}</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container about-history__container">
+      <div class="about-history__left">
+        <h1 class="title about-history__title">{{ $data['texts']['about-history-title'] }}</h1>
+        <p class="about-history__text">{{ $data['texts']['about-history-text'] }}</p>
+      </div>
+
+      <x-histories-block class="about-history__histories" :histories="$data['histories']" />
     </div>
   </main>
+@endsection
+
+@section('script')
+  <script src="{{ asset('js/pages/about/history.js') }}" type="module"></script>
 @endsection
