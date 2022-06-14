@@ -9,27 +9,19 @@ use Illuminate\Http\Request;
 
 class AboutController extends Controller
 {
-  public function index($locale, $category)
+  public function index($lang, $category)
   {
-    $data['texts'] = Helper::getTexts('about.' . $category);
-
-    $data['histories'] = History::select(
-      'id',
-      'year',
-      $locale . '_history as history'
-    )
-      ->orderBy('year', 'asc')
-      ->get();
-
     switch ($category) {
       case 'history':
+        $data['histories'] = History::where('lang', $lang)
+          ->orderBy('year', 'asc')
+          ->get();
+
         return view('pages.about.history', compact('data'));
 
       case 'mission-vision':
-        $data['values'] = Value::select(
-          $locale . '_title as title',
-          $locale . '_text as text',
-        )->get();
+        $data['values'] = Value::where('lang', $lang)
+          ->get();
 
         return view('pages.about.mvv', compact('data'));
 

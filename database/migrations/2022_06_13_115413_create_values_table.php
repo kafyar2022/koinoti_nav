@@ -15,12 +15,9 @@ class CreateValuesTable extends Migration
   {
     Schema::create('values', function (Blueprint $table) {
       $table->id();
-      $table->string('en_title');
-      $table->string('ru_title');
-      $table->string('tj_title');
-      $table->text('en_text');
-      $table->text('ru_text');
-      $table->text('tj_text');
+      $table->string('lang');
+      $table->string('title');
+      $table->text('text');
       $table->timestamps();
     });
   }

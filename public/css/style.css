@@ -61,6 +61,10 @@
   width: 1152px;
 }
 
+.main-logo--disabled {
+  pointer-events: none;
+}
+
 .btn {
   display: flex;
   justify-content: center;
@@ -227,6 +231,10 @@
   color: transparent;
 }
 
+.social-item__logo {
+  object-fit: contain;
+}
+
 .social-item__icon {
   position: absolute;
   left: 0;
@@ -272,6 +280,7 @@
 
 .locale-list__link--current {
   color: inherit;
+  pointer-events: none;
 }
 
 
@@ -380,6 +389,10 @@
   min-width: max-content;
 }
 
+.page-navigation__link--current {
+  pointer-events: none;
+}
+
 .carrier-link {
   display: flex;
   text-decoration: none;
@@ -406,6 +419,7 @@
   border: 0;
   background: var(--secondary-clr);
   box-shadow: var(--btn-shadow);
+  pointer-events: none;
 }
 
 

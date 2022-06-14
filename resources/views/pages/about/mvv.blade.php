@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-  {{ __('About us') }} | {{ __('Koinoti Nav') }}
+  @lang('О нас') | @lang('Коиноти нав')
 @endsection
 
 @section('content')
@@ -9,27 +9,27 @@
     <div class="board about-mvv__board">
       <div class="container">
         <div class="board__inner board__inner--narrow">
-          <h1 class="board__title">{{ $data['texts']['about-mvv-board-title'] }}</h1>
-          <p class="board__text">{{ $data['texts']['about-mvv-board-text'] }}</p>
+          <h1 class="board__title">@lang('Наша миссия')</h1>
+          <p class="board__text">@lang('Способствовать общественному благополучию')</p>
 
-          <a class="play-video about-mvv__play-video">{!! __('Watch <br> video') !!}</a>
+          <a class="play-video about-mvv__play-video">@lang('Смотреть<br>видео')</a>
         </div>
       </div>
     </div>
 
     <section class="about-vision">
       <div class="container about-vision__container">
-        <h2 class="title about-vision__title">{{ $data['texts']['about-vision-title'] }}</h2>
-        <p class="about-vision__subtitle">{{ $data['texts']['about-vision-subtitle'] }}</p>
+        <h2 class="title about-vision__title">@lang('Lorem Ipsum')</h2>
+        <p class="about-vision__subtitle">@lang('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim aliquam pellentesque facilisis egestas risus egestas sit gravida.')</p>
       </div>
 
       <div class="board about-vision__board">
         <div class="container">
           <div class="board__inner">
-            <h1 class="board__title">{{ $data['texts']['about-vision-board-title'] }}</h1>
-            <p class="board__text">{{ $data['texts']['about-vision-board-text'] }}</p>
+            <h1 class="board__title">@lang('Наше видение')</h1>
+            <p class="board__text">@lang('Развиваясь инновационно и динамично занять лидирующее положение в сферах деятельности')</p>
 
-            <a class="play-video">{!! __('Watch <br> video') !!}</a>
+            <a class="play-video">@lang('Смотреть<br>видео')</a>
           </div>
         </div>
       </div>
@@ -37,17 +37,17 @@
 
     <section class="about-values">
       <div class="container about-values__container">
-        <h2 class="title about-values__title">{{ $data['texts']['about-values-title'] }}</h2>
-        <p class="about-values__subtitle">{{ $data['texts']['about-values-subtitle'] }}</p>
+        <h2 class="title about-values__title">@lang('Lorem Ipsum')</h2>
+        <p class="about-values__subtitle">@lang('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim aliquam pellentesque facilisis egestas risus egestas sit gravida.')</p>
       </div>
 
       <div class="board about-values__board">
         <div class="container">
           <div class="board__inner">
-            <h1 class="board__title">{{ $data['texts']['about-values-board-title'] }}</h1>
-            <p class="board__text">{{ $data['texts']['about-values-board-text'] }}</p>
+            <h1 class="board__title">@lang('Наши ценности')</h1>
+            <p class="board__text">@lang('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim aliquam pellentesque facilisis egestas risus egestas sit gravida.')</p>
 
-            <a class="play-video">{!! __('Watch <br> video') !!}</a>
+            <a class="play-video">@lang('Смотреть<br>видео')</a>
           </div>
         </div>
       </div>
@@ -55,8 +55,8 @@
 
     <section class="our-values">
       <div class="container our-values__container">
-        <h2 class="title about-values__title">{{ $data['texts']['our-values-title'] }}</h2>
-        <p class="about-values__subtitle">{{ $data['texts']['our-values-subtitle'] }}</p>
+        <h2 class="title about-values__title">@lang('Lorem Ipsum')</h2>
+        <p class="about-values__subtitle">@lang('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim aliquam pellentesque facilisis egestas risus egestas sit gravida.')</p>
       </div>
 
       <ul class="container values-list our-values__values-list">

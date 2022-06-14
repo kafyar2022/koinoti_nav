@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-  {{ __('About us') }} | {{ __('Koinoti Nav') }}
+  @lang('О нас') | @lang('Коиноти нав')
 @endsection
 
 @section('content')

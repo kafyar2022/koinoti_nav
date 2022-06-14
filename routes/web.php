@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::redirect('/', '/ru');
 
-Route::group(['prefix' => '{locale}'], function () {
+Route::group(['prefix' => '{lang}'], function () {
   Route::get('/', [MainController::class, 'index'])->name('home');
   Route::get('/about/{category}', [AboutController::class, 'index'])->name('about');
   Route::get('/projects/{category}', [ProjectsController::class, 'index'])->name('projects');

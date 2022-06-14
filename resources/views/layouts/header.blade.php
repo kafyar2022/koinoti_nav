@@ -1,39 +1,42 @@
 <header class="main-header">
   <div class="container main-header__top">
-    <a class="main-logo main-header__logo" {{ Route::currentRouteName() !== 'home' ? 'href=' . route('home', ['locale' => app()->getLocale()]) : '' }}>
-      <img class="main-logo__img" src="{{ asset('img/main-logo.svg') }}" width="190" height="32" alt="{{ __('Koinoti Nav logotype') }}">
+    <a class="main-logo main-header__logo @if ($route == 'home') main-logo--disabled @endif" href="{{ route('home', $lang) }}">
+      <img class="main-logo__img" src="{{ asset('img/main-logo.svg') }}" width="190" height="32" alt="@lang('Логотип Коиноти нав')">
     </a>
 
     <ul class="contact-list">
       <li class="contact-list__item contact-list__item--email">
-        <a class="contact-list__link" href="mailto:{{ $app['texts']['email'] }}">{{ $app['texts']['email'] }}</a>
+        <a class="contact-list__link" href="mailto:info@koinotinav.tj">info@koinotinav.tj</a>
       </li>
       <li class="contact-list__item contact-list__item--phone">
-        <a class="contact-list__link" href="tel:{{ str_replace([' ', '(', ')', '-'], '', $app['texts']['phone']) }}">{{ $app['texts']['phone'] }}</a>
+        <a class="contact-list__link" href="tel:+992918556464">+992 918 55 64 64</a>
       </li>
     </ul>
 
     <ul class="social-list main-header__socials">
-      @foreach ($app['socials'] as $social)
-        <li class="social-item">
-          <a class="social-item__link" {{ $social->url ? 'href=' . $social->url : '' }}>
-            <i class="social-item__icon" style="{{ $social->icon ? 'background-image: url(/img/icons/social/' . $social->icon . ')' : '' }}"></i>
-            {{ $social->title }}
-          </a>
-        </li>
-      @endforeach
+      <li class="social-item">
+        <a class="social-item__link" href="#" target="_blank">
+          <img class="social-item__logo" src="{{ asset('files/img/socials/facebook.svg') }}" width="24" height="24" alt="@lang('Фейсбук')" title="@lang('Фейсбук')">
+        </a>
+      </li>
+      <li class="social-item">
+        <a class="social-item__link" href="#" target="_blank">
+          <img class="social-item__logo" src="{{ asset('files/img/socials/instagram.svg') }}" width="24" height="24" alt="@lang('Инстаграм')" title="@lang('Инстаграм')">
+        </a>
+      </li>
+      <li class="social-item">
+        <a class="social-item__link" href="#" target="_blank">
+          <img class="social-item__logo" src="{{ asset('files/img/socials/linkedin.svg') }}" width="24" height="24" alt="@lang('Линкед ин')" title="@lang('Линкед ин')">
+        </a>
+      </li>
     </ul>
 
     <ul class="locale-list">
-      <li class="locale-list__item">
-        <a class="locale-list__link {{ app()->currentLocale() === 'ru' ? 'locale-list__link--current' : '' }}" {{ app()->currentLocale() !== 'ru' ? 'href=' . route(Route::currentRouteName(), ['locale' => 'ru', 'category' => request('category')]) : '' }}>Ru</a>
-      </li>
-      <li class="locale-list__item">
-        <a class="locale-list__link {{ app()->currentLocale() === 'en' ? 'locale-list__link--current' : '' }}" {{ app()->currentLocale() !== 'en' ? 'href=' . route(Route::currentRouteName(), ['locale' => 'en', 'category' => request('category')]) : '' }}>En</a>
-      </li>
-      <li class="locale-list__item">
-        <a class="locale-list__link {{ app()->currentLocale() === 'tj' ? 'locale-list__link--current' : '' }}" {{ app()->currentLocale() !== 'tj' ? 'href=' . route(Route::currentRouteName(), ['locale' => 'tj', 'category' => request('category')]) : '' }}>Tj</a>
-      </li>
+      @foreach (config('app.available_locales') as $locale)
+        <li class="locale-list__item">
+          <a class="locale-list__link @if ($locale == $lang) locale-list__link--current @endif">{{ ucfirst($locale) }}</a>
+        </li>
+      @endforeach
     </ul>
   </div>
 
@@ -41,64 +44,64 @@
     <div class="container main-header__bottom-container">
       <ul class="site-navigation">
         <li class="site-navigation__item">
-          <a class="site-navigation__link {{ Route::currentRouteName() === 'home' ? 'site-navigation__link--current' : '' }}" {{ Route::currentRouteName() !== 'home' ? 'href=' . route('home', ['locale' => app()->getLocale()]) : '' }}>{{ __('Main') }}</a>
+          <a class="site-navigation__link @if ($route == 'home') site-navigation__link--current @endif" href="{{ route('home', $lang) }}">@lang('Главная')</a>
         </li>
 
         <li class="site-navigation__item">
-          <a class="site-navigation__link site-navigation__link--with-extra {{ Route::currentRouteName() === 'about' ? 'site-navigation__link--current' : '' }}">{{ __('About us') }}</a>
+          <a class="site-navigation__link site-navigation__link--with-extra @if ($route == 'about') site-navigation__link--current @endif">@lang('О нас')</a>
 
           <ul class="page-navigation page-navigation--hidden">
             <li class="page-navigation__item">
-              <a class="page-navigation__link" {{ Route::currentRouteName() === 'about' && request('category') === 'history' ? '' : 'href=' . route('about', ['locale' => app()->getLocale(), 'category' => 'history']) }}>{{ __('History') }}</a>
+              <a class="page-navigation__link @if ($route == 'about' && request('category') == 'history') page-navigation__link--current @endif" href="{{ route('about', ['lang' => $lang, 'category' => 'history']) }}">@lang('История')</a>
             </li>
             <li class="page-navigation__item">
-              <a class="page-navigation__link" {{ Route::currentRouteName() === 'about' && request('category') === 'mission-vision' ? '' : 'href=' . route('about', ['locale' => app()->getLocale(), 'category' => 'mission-vision']) }}>{{ __('Mission, vision, values') }}</a>
+              <a class="page-navigation__link @if ($route == 'about' && request('category') == 'mission-vision') page-navigation__link--current @endif" href="{{ route('about', ['lang' => $lang, 'category' => 'mission-vision']) }}">@lang('Миссия, видение, ценности')</a>
             </li>
             <li class="page-navigation__item">
-              <a class="page-navigation__link" {{ Route::currentRouteName() === 'about' && request('category') === 'management' ? '' : 'href=' . route('about', ['locale' => app()->getLocale(), 'category' => 'management']) }}>{{ __('Management') }}</a>
+              <a class="page-navigation__link @if ($route == 'about' && request('category') == 'management') page-navigation__link--current @endif" href="{{ route('about', ['lang' => $lang, 'category' => 'management']) }}">@lang('Менеджмент')</a>
             </li>
             <li class="page-navigation__item">
-              <a class="page-navigation__link" {{ Route::currentRouteName() === 'about' && request('category') === 'news' ? '' : 'href=' . route('about', ['locale' => app()->getLocale(), 'category' => 'news']) }}>{{ __('News') }}</a>
+              <a class="page-navigation__link @if ($route == 'about' && request('category') == 'news') page-navigation__link--current @endif" href="{{ route('about', ['lang' => $lang, 'category' => 'news']) }}">@lang('Новости')</a>
             </li>
           </ul>
         </li>
 
         <li class="site-navigation__item">
-          <a class="site-navigation__link site-navigation__link--with-extra {{ Route::currentRouteName() === 'projects' ? 'site-navigation__link--current' : '' }}">{{ __('Projects') }}</a>
+          <a class="site-navigation__link site-navigation__link--with-extra @if ($route == 'projects') site-navigation__link--current @endif">@lang('Проекты')</a>
 
           <ul class="page-navigation page-navigation--hidden">
             <li class="page-navigation__item">
-              <a class="page-navigation__link" {{ Route::currentRouteName() === 'projects' && request('category') === 'implemented-by-us' ? '' : 'href=' . route('projects', ['locale' => app()->getLocale(), 'category' => 'implemented-by-us']) }}>{{ __('Implemented by us') }}</a>
+              <a class="page-navigation__link @if ($route == 'projects' && request('category') == 'implemented-by-us') page-navigation__link--current @endif" href="{{ route('projects', ['lang' => $lang, 'category' => 'implemented-by-us']) }}">@lang('Реализованные нами')</a>
             </li>
             <li class="page-navigation__item">
-              <a class="page-navigation__link" {{ Route::currentRouteName() === 'projects' && request('category') === 'with-our-support' ? '' : 'href=' . route('projects', ['locale' => app()->getLocale(), 'category' => 'with-our-support']) }}>{{ __('With our support') }}</a>
+              <a class="page-navigation__link @if ($route == 'projects' && request('category') == 'with-our-support') page-navigation__link--current @endif" href="{{ route('projects', ['lang' => $lang, 'category' => 'with-our-support']) }}">@lang('При нашей поддержке')</a>
             </li>
           </ul>
         </li>
 
         <li class="site-navigation__item">
-          <a class="site-navigation__link site-navigation__link--with-extra {{ Route::currentRouteName() === 'partnership' ? 'site-navigation__link--current' : '' }}">{{ __('Partnership') }}</a>
+          <a class="site-navigation__link site-navigation__link--with-extra @if ($route == 'partnership') site-navigation__link--current @endif">@lang('Партнерство')</a>
 
           <ul class="page-navigation page-navigation--hidden">
             <li class="page-navigation__item">
-              <a class="page-navigation__link" {{ Route::currentRouteName() === 'partnership' && request('category') === 'investors-and-states' ? '' : 'href=' . route('partnership', ['locale' => app()->getLocale(), 'category' => 'investors-and-states']) }}>{{ __('Investors and states') }}</a>
+              <a class="page-navigation__link @if ($route == 'partnership' && request('category') == 'investors-and-states') page-navigation__link--current @endif" href="{{ route('partnership', ['lang' => $lang, 'category' => 'investors-and-states']) }}">@lang('Инвесторам и государствам')</a>
             </li>
             <li class="page-navigation__item">
-              <a class="page-navigation__link" {{ Route::currentRouteName() === 'partnership' && request('category') === 'startups-and-innovators' ? '' : 'href=' . route('partnership', ['locale' => app()->getLocale(), 'category' => 'startups-and-innovators']) }}>{{ __('Startups and innovators') }}</a>
+              <a class="page-navigation__link @if ($route == 'partnership' && request('category') == 'startups-and-innovators') page-navigation__link--current @endif" href="{{ route('partnership', ['lang' => $lang, 'category' => 'startups-and-innovators']) }}">@lang('Стартаперам и новаторам')</a>
             </li>
           </ul>
         </li>
 
         <li class="site-navigation__item">
-          <a class="site-navigation__link {{ Route::currentRouteName() === 'contribution' ? 'site-navigation__link--current' : '' }}" {{ Route::currentRouteName() === 'contribution' ? '' : 'href=' . route('contribution', ['locale' => app()->getLocale()]) }}>{{ __('Contribution to society') }}</a>
+          <a class="site-navigation__link @if ($route == 'contribution') site-navigation__link--current @endif" href="{{ route('contribution', $lang) }}">@lang('Вклад в общество')</a>
         </li>
 
         <li class="site-navigation__item">
-          <a class="site-navigation__link {{ Route::currentRouteName() === 'contacts' ? 'site-navigation__link--current' : '' }}" {{ Route::currentRouteName() === 'contacts' ? '' : 'href=' . route('contacts', ['locale' => app()->getLocale()]) }}>{{ __('Contacts') }}</a>
+          <a class="site-navigation__link @if ($route == 'contacts') site-navigation__link--current @endif" href="{{ route('contacts', $lang) }}">@lang('Контакты')</a>
         </li>
       </ul>
 
-      <a class="carrier-link {{ Route::currentRouteName() === 'carrier' ? 'carrier-link--current' : '' }}" {{ Route::currentRouteName() === 'carrier' ? '' : 'href=' . route('carrier', ['locale' => app()->getLocale()])  }}>{{ __('Carrier') }}</a>
+      <a class="carrier-link @if ($route == 'carrier') carrier-link--current @endif" href="{{ route('carrier', $lang) }}">@lang('Карьера')</a>
     </div>
   </div>
 </header>

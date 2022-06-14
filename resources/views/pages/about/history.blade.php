@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-  {{ __('About us') }} | {{ __('Koinoti Nav') }}
+  @lang('О нас') | @lang('Коиноти нав')
 @endsection
 
 @section('content')
@@ -9,18 +9,18 @@
     <div class="board about-history__board">
       <div class="container">
         <div class="board__inner board__inner--narrow">
-          <h1 class="board__title">{{ $data['texts']['about-history-board-title'] }}</h1>
-          <p class="board__text board__text--upper">{{ $data['texts']['about-history-board-text'] }}</p>
+          <h1 class="board__title">@lang('Группа компаний<br>КОИНОТИ НАВ')</h1>
+          <p class="board__text board__text--upper">@lang('Верим, можем, создаем')</p>
 
-          <a class="play-video about-history__play-video">{!! __('Watch <br> video') !!}</a>
+          <a class="play-video about-history__play-video">@lang('Смотреть<br>видео')</a>
         </div>
       </div>
     </div>
 
     <div class="container about-history__container">
       <div class="about-history__left">
-        <h1 class="title about-history__title">{{ $data['texts']['about-history-title'] }}</h1>
-        <p class="about-history__text">{{ $data['texts']['about-history-text'] }}</p>
+        <h1 class="title about-history__title">@lang('О нас')</h1>
+        <p class="about-history__text">@lang('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare vitae sed aliquam sed ullamcorper.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare vitae sed aliquam sed ullamcorper.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare vitae sed aliquam sed ullamcorper.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare vitae sed aliquam sed ullamcorper.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare vitae sed aliquam sed ullamcorper.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare vitae sed aliquam sed ullamcorper.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare vitae sed aliquam sed ullamcorper.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare vitae sed aliquam sed ullamcorper.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare vitae sed aliquam sed ullamcorper.Lorem ipsum dolor sit amet, consectetur adipiscing elit. ')</p>
       </div>
 
       <x-histories-block class="about-history__histories" :histories="$data['histories']" />

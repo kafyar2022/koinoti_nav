@@ -16,7 +16,7 @@ class Localization
    */
   public function handle(Request $request, Closure $next)
   {
-    app()->setLocale($request->locale);
+    app()->setLocale($request->lang);
 
     return $next($request);
   }

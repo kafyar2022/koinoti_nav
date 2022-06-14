@@ -10,31 +10,19 @@ use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
-  public function index($locale)
+  public function index($lang)
   {
-    $data['texts'] = Helper::getTexts('home');
-
-    $data['histories'] = History::select(
-      'id',
-      'year',
-      $locale . '_history as history'
-    )
+    $data['histories'] = History::where('lang', $lang)
       ->orderBy('year', 'asc')
       ->get();
 
-    $data['news'] = News::select(
-      'slug',
-      $locale . '_title as title',
-      $locale . '_text as text',
-      'img',
-      'created_at'
-    )->latest()->take(3)->get();
+    $data['news'] = News::where('lang', $lang)
+      ->latest()
+      ->take(3)
+      ->get();
 
-    $data['projects'] = Project::select(
-      $locale . '_title as title',
-      'url',
-      'logo',
-    )->get();
+    $data['projects'] = Project::where('lang', $lang)
+      ->get();
 
     return view('pages.home', compact('data'));
   }

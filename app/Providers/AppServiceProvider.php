@@ -32,17 +32,9 @@ class AppServiceProvider extends ServiceProvider
     Paginator::useBootstrap();
 
     view()->composer('*', function ($view) {
-      $app['texts'] = Helper::getTexts('all');
-
-      $app['socials'] = Social::select(
-        'id',
-        request('locale') . '_title as title',
-        'icon',
-        'url',
-      )->get();
-
       return $view->with([
-        'app' => $app,
+        'route' => \Route::currentRouteName(),
+        'lang' => app()->getLocale(),
       ]);
     });
   }
