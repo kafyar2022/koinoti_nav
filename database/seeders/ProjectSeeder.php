@@ -17,6 +17,7 @@ class ProjectSeeder extends Seeder
   {
     $projects = [
       [
+        'category' => 'implemented-by-us',
         'lang' => 'ru',
         'title' => 'Хонаи ман',
         'slug' => 'honai-man',
@@ -24,6 +25,7 @@ class ProjectSeeder extends Seeder
         'logo' => 'honai-man.png',
       ],
       [
+        'category' => 'implemented-by-us',
         'lang' => 'ru',
         'title' => 'Дусти фарма',
         'slug' => 'dusti-pharma',
@@ -31,6 +33,7 @@ class ProjectSeeder extends Seeder
         'logo' => 'dusti-pharma.png',
       ],
       [
+        'category' => 'implemented-by-us',
         'lang' => 'ru',
         'title' => 'Ёвар',
         'slug' => 'evar',
@@ -38,6 +41,7 @@ class ProjectSeeder extends Seeder
         'logo' => 'evar.png',
       ],
       [
+        'category' => 'implemented-by-us',
         'lang' => 'ru',
         'title' => 'Хонаи ман',
         'slug' => 'honai-man-2',
@@ -45,6 +49,7 @@ class ProjectSeeder extends Seeder
         'logo' => 'honai-man.png',
       ],
       [
+        'category' => 'implemented-by-us',
         'lang' => 'ru',
         'title' => 'Дусти фарма',
         'slug' => 'dusti-pharma-2',
@@ -52,6 +57,7 @@ class ProjectSeeder extends Seeder
         'logo' => 'dusti-pharma.png',
       ],
       [
+        'category' => 'implemented-by-us',
         'lang' => 'ru',
         'title' => 'Ёвар',
         'slug' => 'evar-2',
@@ -59,6 +65,7 @@ class ProjectSeeder extends Seeder
         'logo' => 'evar.png',
       ],
       [
+        'category' => 'with-our-support',
         'lang' => 'ru',
         'title' => 'Хонаи ман',
         'slug' => 'honai-man-3',
@@ -66,6 +73,7 @@ class ProjectSeeder extends Seeder
         'logo' => 'honai-man.png',
       ],
       [
+        'category' => 'with-our-support',
         'lang' => 'ru',
         'title' => 'Дусти фарма',
         'slug' => 'dusti-pharma-3',
@@ -73,6 +81,7 @@ class ProjectSeeder extends Seeder
         'logo' => 'dusti-pharma.png',
       ],
       [
+        'category' => 'with-our-support',
         'lang' => 'ru',
         'title' => 'Ёвар',
         'slug' => 'evar-3',
@@ -80,6 +89,7 @@ class ProjectSeeder extends Seeder
         'logo' => 'evar.png',
       ],
       [
+        'category' => 'with-our-support',
         'lang' => 'ru',
         'title' => 'Хонаи ман',
         'slug' => 'honai-man-4',
@@ -87,6 +97,7 @@ class ProjectSeeder extends Seeder
         'logo' => 'honai-man.png',
       ],
       [
+        'category' => 'with-our-support',
         'lang' => 'ru',
         'title' => 'Дусти фарма',
         'slug' => 'dusti-pharma-4',
@@ -94,6 +105,7 @@ class ProjectSeeder extends Seeder
         'logo' => 'dusti-pharma.png',
       ],
       [
+        'category' => 'with-our-support',
         'lang' => 'ru',
         'title' => 'Ёвар',
         'slug' => 'evar-4',
@@ -101,6 +113,7 @@ class ProjectSeeder extends Seeder
         'logo' => 'evar.png',
       ],
       [
+        'category' => 'with-our-support',
         'lang' => 'ru',
         'title' => 'Хонаи ман',
         'slug' => 'honai-man-5',
@@ -108,6 +121,7 @@ class ProjectSeeder extends Seeder
         'logo' => 'honai-man.png',
       ],
       [
+        'category' => 'with-our-support',
         'lang' => 'ru',
         'title' => 'Дусти фарма',
         'slug' => 'dusti-pharma-5',
@@ -115,6 +129,7 @@ class ProjectSeeder extends Seeder
         'logo' => 'dusti-pharma.png',
       ],
       [
+        'category' => 'with-our-support',
         'lang' => 'ru',
         'title' => 'Ёвар',
         'slug' => 'evar-5',
@@ -122,6 +137,7 @@ class ProjectSeeder extends Seeder
         'logo' => 'evar.png',
       ],
       [
+        'category' => 'with-our-support',
         'lang' => 'ru',
         'title' => 'Хонаи ман',
         'slug' => 'honai-man-6',
@@ -129,6 +145,7 @@ class ProjectSeeder extends Seeder
         'logo' => 'honai-man.png',
       ],
       [
+        'category' => 'with-our-support',
         'lang' => 'ru',
         'title' => 'Дусти фарма',
         'slug' => 'dusti-pharma-6',
@@ -136,6 +153,7 @@ class ProjectSeeder extends Seeder
         'logo' => 'dusti-pharma.png',
       ],
       [
+        'category' => 'with-our-support',
         'lang' => 'ru',
         'title' => 'Ёвар',
         'slug' => 'evar-6',
@@ -143,6 +161,7 @@ class ProjectSeeder extends Seeder
         'logo' => 'evar.png',
       ],
       [
+        'category' => 'with-our-support',
         'lang' => 'ru',
         'title' => 'Хонаи ман',
         'slug' => 'honai-man-7',
@@ -150,6 +169,7 @@ class ProjectSeeder extends Seeder
         'logo' => 'honai-man.png',
       ],
       [
+        'category' => 'with-our-support',
         'lang' => 'ru',
         'title' => 'Дусти фарма',
         'slug' => 'dusti-pharma-7',
@@ -157,6 +177,7 @@ class ProjectSeeder extends Seeder
         'logo' => 'dusti-pharma.png',
       ],
       [
+        'category' => 'with-our-support',
         'lang' => 'ru',
         'title' => 'Ёвар',
         'slug' => 'evar-7',
@@ -164,6 +185,7 @@ class ProjectSeeder extends Seeder
         'logo' => 'evar.png',
       ],
       [
+        'category' => 'with-our-support',
         'lang' => 'ru',
         'title' => 'Хонаи ман',
         'slug' => 'honai-man-8',
@@ -171,6 +193,7 @@ class ProjectSeeder extends Seeder
         'logo' => 'honai-man.png',
       ],
       [
+        'category' => 'with-our-support',
         'lang' => 'ru',
         'title' => 'Дусти фарма',
         'slug' => 'dusti-pharma-8',
@@ -178,6 +201,7 @@ class ProjectSeeder extends Seeder
         'logo' => 'dusti-pharma.png',
       ],
       [
+        'category' => 'with-our-support',
         'lang' => 'ru',
         'title' => 'Ёвар',
         'slug' => 'evar-8',
@@ -185,6 +209,7 @@ class ProjectSeeder extends Seeder
         'logo' => 'evar.png',
       ],
       [
+        'category' => 'with-our-support',
         'lang' => 'ru',
         'title' => 'Хонаи ман',
         'slug' => 'honai-man-9',
@@ -192,6 +217,7 @@ class ProjectSeeder extends Seeder
         'logo' => 'honai-man.png',
       ],
       [
+        'category' => 'with-our-support',
         'lang' => 'ru',
         'title' => 'Дусти фарма',
         'slug' => 'dusti-pharma-9',
@@ -199,6 +225,7 @@ class ProjectSeeder extends Seeder
         'logo' => 'dusti-pharma.png',
       ],
       [
+        'category' => 'with-our-support',
         'lang' => 'ru',
         'title' => 'Ёвар',
         'slug' => 'evar-9',
@@ -210,6 +237,7 @@ class ProjectSeeder extends Seeder
     foreach (range(1, 9) as $key) {
       foreach ($projects as $project) {
         Project::create([
+          'category' => $project['category'],
           'lang' => $project['lang'],
           'title' => $project['title'],
           'slug' => $project['slug'],

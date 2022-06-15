@@ -34,7 +34,7 @@
     <ul class="locale-list">
       @foreach (config('app.available_locales') as $locale)
         <li class="locale-list__item">
-          <a class="locale-list__link @if ($locale == $lang) locale-list__link--current @endif">{{ ucfirst($locale) }}</a>
+          <a class="locale-list__link @if ($locale == $lang) locale-list__link--current @endif" href="{{ route($route, ['lang' => $locale, 'category' => request('category'), 'slug' => request('slug')]) }}">{{ ucfirst($locale) }}</a>
         </li>
       @endforeach
     </ul>

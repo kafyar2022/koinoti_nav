@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Helpers\Helper;
 use App\Models\History;
+use App\Models\News;
 use App\Models\Value;
-use Illuminate\Http\Request;
 
 class AboutController extends Controller
 {
@@ -26,9 +25,12 @@ class AboutController extends Controller
         return view('pages.about.mvv', compact('data'));
 
       case 'management':
-        return view('pages.about.management', compact('data'));
+        return view('pages.about.management');
 
       case 'news':
+        $data['news'] = News::where('lang', $lang)
+          ->paginate(9);
+
         return view('pages.about.news', compact('data'));
     }
   }

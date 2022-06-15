@@ -78,7 +78,7 @@
           <p class="caption__subtitle">@lang('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare vitae sed aliquam sed ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare vitae sed aliquam sed ullamcorper.')</p>
         </div>
 
-        <a class="btn caption__btn" href="{{ route('projects', ['lang' => $lang, 'category' => 'all']) }}">@lang('Все наши проекты')</a>
+        <a class="btn caption__btn" href="{{ route('projects', $lang) }}">@lang('Все наши проекты')</a>
       </div>
 
       <div class="glide projects-glide">

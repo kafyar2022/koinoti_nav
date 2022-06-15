@@ -2,24 +2,23 @@
 
 namespace App\Http\Controllers;
 
-use App\Helpers\Helper;
-use Illuminate\Http\Request;
+use App\Models\Project;
 
 class ProjectsController extends Controller
 {
-  public function index($locale, $category)
+  public function index($lang)
   {
-    $data['texts'] = Helper::getTexts('projects');
+    if (request('category')) {
+      $data['projects'] = Project::where('lang', $lang)
+        ->where('category', request('category'))
+        ->paginate(9);
 
-    switch ($category) {
-      case 'implemented-by-us':
-        return view('pages.projects', $data);
-
-      case 'with-our-support':
-        return view('pages.projects', $data);
-
-      default:
-        return view('pages.projects', $data);
+      return view('pages.projects', compact('data'));
     }
+
+    $data['projects'] = Project::where('lang', $lang)
+      ->paginate(9);
+
+    return view('pages.projects', compact('data'));
   }
 }

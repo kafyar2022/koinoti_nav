@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Helpers\Helper;
 use App\Models\History;
 use App\Models\News;
 use App\Models\Project;
-use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
