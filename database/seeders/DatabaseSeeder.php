@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
       NewsSeeder::class,
       ProjectSeeder::class,
       ValueSeeder::class,
+      PrincipleSeeder::class,
     ]);
   }
 }

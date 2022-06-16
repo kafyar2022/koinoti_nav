@@ -101,7 +101,7 @@
         </li>
       </ul>
 
-      <a class="carrier-link @if ($route == 'carrier') carrier-link--current @endif" href="{{ route('carrier', $lang) }}">@lang('Карьера')</a>
+      <a class="carrier-link @if ($route == 'carrier' || $route == 'carrier.test') carrier-link--current @endif" href="{{ route('carrier', $lang) }}">@lang('Карьера')</a>
     </div>
   </div>
 </header>
