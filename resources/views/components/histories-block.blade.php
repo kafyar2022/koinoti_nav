@@ -1,7 +1,7 @@
 @props(['class', 'histories'])
 
 <section class="glide history-glide history-glide--closed-filter {{ $class }}">
-  <h2 class="history-glide__title">{{ __('History of the company') }}</h2>
+  <h2 class="history-glide__title">@lang('История компании')</h2>
 
   <div class="history-glide__filter" data-glide-el="controls[nav]">
     @foreach ($histories as $key => $history)

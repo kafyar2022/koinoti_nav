@@ -22,7 +22,7 @@
       <ul class="card-list news-list">
         @foreach ($data['news'] as $news)
           <li class="card-list__item">
-            <x-news-card class="" :news="$news" />
+            <x-news-card :news="$news" />
           </li>
         @endforeach
       </ul>

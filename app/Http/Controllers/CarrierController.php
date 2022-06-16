@@ -6,10 +6,8 @@ use App\Helpers\Helper;
 
 class CarrierController extends Controller
 {
-  public function index($locale)
+  public function index($lang)
   {
-    $data['texts'] = Helper::getTexts('carrier');
-
-    return view('pages.carrier.index', $data);
+    return view('pages.carrier.index');
   }
 }

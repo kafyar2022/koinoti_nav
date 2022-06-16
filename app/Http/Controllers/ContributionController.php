@@ -8,8 +8,11 @@ class ContributionController extends Controller
 {
   public function index($lang)
   {
-    $data = Helper::getTexts('contribution');
+    return view('pages.contribution.index');
+  }
 
-    return view('pages.contribution', $data);
+  public function show($lang, $slug)
+  {
+    return view('pages.contribution.show');
   }
 }

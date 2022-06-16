@@ -31,7 +31,20 @@ class AboutController extends Controller
         $data['news'] = News::where('lang', $lang)
           ->paginate(9);
 
-        return view('pages.about.news', compact('data'));
+        return view('pages.about.news.index', compact('data'));
     }
+  }
+
+  public function newsShow($lang, $slug)
+  {
+    $data['new'] = News::where('slug', $slug)
+      ->first();
+
+    $data['news'] = News::where('lang', $lang)
+      ->latest()
+      ->take(3)
+      ->get();
+
+    return view('pages.about.news.show', compact('data'));
   }
 }

@@ -6,10 +6,8 @@ use App\Helpers\Helper;
 
 class ContactsController extends Controller
 {
-  public function index($locale)
+  public function index($lang)
   {
-    $data['texts'] = Helper::getTexts('contacts');
-
-    return view('pages.contacts', $data);
+    return view('pages.contacts');
   }
 }

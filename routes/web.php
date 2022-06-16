@@ -25,10 +25,11 @@ Route::redirect('/', '/ru');
 Route::group(['prefix' => '{lang}'], function () {
   Route::get('/', [MainController::class, 'index'])->name('home');
   Route::get('/about/{category}', [AboutController::class, 'index'])->name('about');
-  Route::get('/about/news/{slug}', [AboutController::class, 'index'])->name('about.news.show');
+  Route::get('/about/news/{slug}', [AboutController::class, 'newsShow'])->name('about.news.show');
   Route::get('/projects/{category?}', [ProjectsController::class, 'index'])->name('projects');
   Route::get('/partnership/{category}', [PartnershipController::class, 'index'])->name('partnership');
   Route::get('/contribution', [ContributionController::class, 'index'])->name('contribution');
+  Route::get('/contribution/{slug}', [ContributionController::class, 'show'])->name('contribution.show');
   Route::get('/contacts', [ContactsController::class, 'index'])->name('contacts');
   Route::get('/carrier', [CarrierController::class, 'index'])->name('carrier');
 });

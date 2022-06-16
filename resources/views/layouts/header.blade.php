@@ -48,7 +48,7 @@
         </li>
 
         <li class="site-navigation__item">
-          <a class="site-navigation__link site-navigation__link--with-extra @if ($route == 'about') site-navigation__link--current @endif">@lang('О нас')</a>
+          <a class="site-navigation__link site-navigation__link--with-extra @if ($route == 'about' || $route == 'about.news.show') site-navigation__link--current @endif">@lang('О нас')</a>
 
           <ul class="page-navigation page-navigation--hidden">
             <li class="page-navigation__item">
@@ -93,7 +93,7 @@
         </li>
 
         <li class="site-navigation__item">
-          <a class="site-navigation__link @if ($route == 'contribution') site-navigation__link--current @endif" href="{{ route('contribution', $lang) }}">@lang('Вклад в общество')</a>
+          <a class="site-navigation__link @if ($route == 'contribution' || $route == 'contribution.show') site-navigation__link--current @endif" href="{{ route('contribution', $lang) }}">@lang('Вклад в общество')</a>
         </li>
 
         <li class="site-navigation__item">
