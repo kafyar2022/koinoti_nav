@@ -54,7 +54,7 @@
         <div class="caption home-news__caption">
           <div class="caption__inner">
             <h2 class="title caption__title">@lang('Наши новости')</h2>
-            <p class="caption__subtitle">@lang('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare vitae sed aliquam sed ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare vitae sed aliquam sed ullamcorper.')</p>
+            <p class="caption__subtitle">@lang('Новости, история развития и интересные события из жизни Группы компаний "КОИНОТИ НАВ", которыми всегда приятно поделиться.')</p>
           </div>
 
           <a class="btn caption__btn" href="{{ route('about', ['lang' => $lang, 'category' => 'history']) }}">@lang('Читать все новости')</a>
@@ -75,7 +75,7 @@
       <div class="caption home-projects__caption">
         <div class="caption__inner">
           <h2 class="title caption__title">@lang('Наши проекты')</h2>
-          <p class="caption__subtitle">@lang('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare vitae sed aliquam sed ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare vitae sed aliquam sed ullamcorper.')</p>
+          <p class="caption__subtitle">@lang('Создание новых рабочих мест, реализация инфраструктурных проектов, прямые инвестиции, то, что мы делаем с самого первого дня основания Группы компаний "КОИНОТИ НАВ". Мы объединяем представителей политической, культурной, интеллектуальной и деловой элиты; усиливаем партнерство и сотрудничество успешных людей, нацеленное на совершенствование бизнес-среды и установлению деловых и общественных связей.')</p>
         </div>
 
         <a class="btn caption__btn" href="{{ route('projects', $lang) }}">@lang('Все наши проекты')</a>
