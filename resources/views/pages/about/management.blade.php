@@ -16,8 +16,8 @@
     </div>
 
     <section class="container employees">
-      <h2 class="title about-management__title">@lang('Lorem Ipsum')</h2>
-      <p class="about-management__subtitle">@lang('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim aliquam pellentesque facilisis egestas risus egestas sit gravida.')</p>
+      <h2 class="title about-management__title">@lang('Наш менеджмент')</h2>
+      <p class="about-management__subtitle">@lang('ТОП Менеджмент Группы компаний "КОИНОТИ НАВ" осмысленными решениями и эффективными действиями, достигает операционные цели и реализует стратегические задачи, демонстрирует верность Миссии Группы компании, объединяя более 300 высококлассных специалистов и профессионалов из разных областей и направлений.')</p>
 
       <ul class="card-list employee-list">
         @foreach (range(1, 9) as $key)

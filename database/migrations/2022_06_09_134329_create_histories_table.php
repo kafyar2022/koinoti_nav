@@ -16,7 +16,7 @@ class CreateHistoriesTable extends Migration
     Schema::create('histories', function (Blueprint $table) {
       $table->id();
       $table->string('lang');
-      $table->integer('year');
+      $table->string('year');
       $table->text('history');
       $table->timestamps();
     });

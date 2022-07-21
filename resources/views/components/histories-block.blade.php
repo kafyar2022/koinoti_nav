@@ -18,10 +18,4 @@
       @endforeach
     </ul>
   </div>
-
-  <div class="glide__bullets history-glide__bullets" data-glide-el="controls[nav]">
-    @foreach ($histories as $key => $history)
-      <button class="glide__bullet history-glide__bullet" data-glide-dir="={{ $key }}"></button>
-    @endforeach
-  </div>
 </section>

@@ -17,7 +17,7 @@
 
     <section class="container projects" id="projects">
       <h2 class="title projects__title">@lang('Lorem Ipsum')</h2>
-      <p class="projects__subtitle">@lang('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim aliquam pellentesque facilisis egestas risus egestas sit gravida.')</p>
+      <p class="projects__subtitle">@lang('Создание новых рабочих мест, реализация инфраструктурных проектов, прямые инвестиции, то, что мы делаем с самого первого дня основания Группы компаний "КОИНОТИ НАВ". Мы объединяем представителей политической, культурной, интеллектуальной и деловой элиты; усиливаем партнерство и сотрудничество успешных людей, нацеленное на совершенствование бизнес-среды и установлению деловых и общественных связей.')</p>
 
       <ul class="card-list projects-list">
         @foreach ($data['projects'] as $project)

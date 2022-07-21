@@ -17,7 +17,7 @@
 
     <section class="container" id="news">
       <h2 class="title about-news__title">@lang('Lorem Ipsum')</h2>
-      <p class="about-news__subtitle">@lang('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim aliquam pellentesque facilisis egestas risus egestas sit gravida.')</p>
+      <p class="about-news__subtitle">@lang('Новости, история развития и интересные события из жизни Группы компаний "КОИНОТИ НАВ", которыми всегда приятно поделиться.')</p>
 
       <ul class="card-list news-list">
         @foreach ($data['news'] as $news)
